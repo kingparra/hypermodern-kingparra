@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "hypermodern-kingparra"
+version = "0.1.0"
+description = "The hypermodern Python project"
+authors = ["Chris King-Parra <chris@kingparra.work>"]
+readme = "readme.rst"
+packages = [{include = "hypermodern_kingparra", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+coverage = {extras = ["toml"], version = "^7.4.1"}
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+hypermodern-kingparra = "hypermodern_kingparra.console:main"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["hypermodern_kingparra"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
