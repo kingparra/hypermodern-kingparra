@@ -6,9 +6,12 @@ Questions
 
 * What is code coverage?
 
-  How much of your source code is executed while
-  running its test suite.
+  The percentage of your source code that is exercised by the test suite.
 
 * Pyenv is super frustrating. How can I install
   multiple versions of python for matrix testing with
   Nox?
+
+* I can't get Nox to work. I've tried installing it with pip on the host,
+  installing it with pipx, installing it as a os-level package in a toolbox
+  container, and installing it with devbox.

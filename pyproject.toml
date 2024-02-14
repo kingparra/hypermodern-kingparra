@@ -4,16 +4,15 @@ version = "0.1.0"
 description = "The hypermodern Python project"
 authors = ["Chris King-Parra <chris@kingparra.work>"]
 readme = "readme.rst"
+license = "MIT"
 packages = [{include = "hypermodern_kingparra", from = "src"}]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-requests = "^2.31.0"
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.0.0"
-coverage = {extras = ["toml"], version = "^7.4.1"}
-pytest-cov = "^4.1.0"
+bpython = "^0.24"
 
 [build-system]
 requires = ["poetry-core"]
@@ -32,4 +31,8 @@ source = ["hypermodern_kingparra"]
 [tool.coverage.report]
 show_missing = true
 fail_under = 100
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.1.7"
 
